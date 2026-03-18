@@ -1,0 +1,143 @@
+/* متغيرات الألوان للاستخدام المتكرر */
+:root {
+  --premium-black: #0a0a0a;
+  --premium-yellow: #FFC700;
+  --premium-yellow-rgb: 255, 199, 0;
+  --premium-dark-yellow: #e6b400;
+  --premium-text-white: #ffffff;
+  --premium-text-gray: rgba(255, 255, 255, 0.7);
+  --premium-dark-bg: #171717;
+}
+
+/* الأنماط العامة */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* شريط التنقل المميز */
+.premium-navbar {
+  width: 100%;
+  background-color: var(--premium-black);
+  border-bottom: 2px solid var(--premium-yellow);
+}
+
+.premium-navbar-container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.25rem 2rem; /* py-5 px-8 */
+}
+
+.premium-navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* الشعار */
+.premium-navbar-logo {
+  height: 3rem; /* h-12 */
+  width: auto;
+  filter: brightness(0) invert(1); /* brightness-0 invert */
+}
+
+/* قائمة التنقل */
+.premium-navbar-menu {
+  display: none;
+  align-items: center;
+  gap: 2.5rem; /* gap-10 */
+  list-style-type: none;
+}
+
+.premium-navbar-link {
+  color: var(--premium-text-gray);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2em; /* tracking-[0.2em] */
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.premium-navbar-link:hover {
+  color: var(--premium-text-white);
+}
+
+.premium-navbar-link.active {
+  color: var(--premium-yellow);
+}
+
+/* زر التسجيل */
+.premium-navbar-btn {
+  background-color: transparent;
+  border: 1px solid var(--premium-yellow);
+  color: var(--premium-yellow);
+  padding: 0.625rem 1.5rem; /* py-2.5 px-6 */
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em; /* tracking-[0.15em] */
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.premium-navbar-btn:hover {
+  background-color: var(--premium-yellow);
+  color: var(--premium-black);
+}
+
+/* التصميم المتجاوب */
+@media (min-width: 768px) {
+  .premium-navbar-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .premium-navbar-container {
+    padding: 1rem 1.5rem;
+  }
+  
+  .premium-navbar-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .premium-navbar-menu {
+    order: 3;
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  
+  .premium-navbar-logo {
+    height: 2.5rem;
+  }
+}
+
+/* تأثيرات إضافية */
+.premium-navbar-btn:active {
+  transform: translateY(1px);
+}
+
+.premium-navbar-link:focus,
+.premium-navbar-btn:focus {
+  outline: 2px solid var(--premium-yellow);
+  outline-offset: 2px;
+}
+
+/* تأثيرات للشاشات الكبيرة */
+@media (min-width: 1400px) {
+  .premium-navbar-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

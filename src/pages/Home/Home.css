@@ -1,0 +1,1346 @@
+/* Luxury Theme Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #1a1a1a;
+}
+
+.page-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #dbeef9, white);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  padding-top: 160px;
+  padding-bottom: 80px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.hero-description {
+  font-size: 1.0625rem;
+  color: #525252;
+  max-width: 540px;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+/* CTA Group */
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.cta-button.primary {
+  background-color: #1a1a1a;
+  color: #faf9f6;
+}
+
+.cta-button.primary:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: #1a1a1a;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.cta-button.secondary:hover {
+  border-color: #1a1a1a;
+}
+
+/* Stats */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 3rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.06);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.stat-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.stat-label {
+  font-size: 0.8125rem;
+  color: #666;
+  letter-spacing: 0.02em;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Image */
+.hero-image-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-image-container {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.12);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16/8;
+  object-fit: cover;
+}
+
+.hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent 50%);
+  pointer-events: none;
+}
+
+/* Floating Card */
+.floating-card {
+  position: absolute;
+  bottom: -30px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.75rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.floating-card-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  color: #faf9f6;
+}
+
+.floating-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.floating-card-label {
+  font-size: 0.75rem;
+  color: #666;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.floating-card-value {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+/* ===== FEATURES SECTION ===== */
+.features {
+  background-color: #fff;
+  padding: 120px 2rem;
+}
+
+.features-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.features-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.features-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.feature-card {
+  padding: 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.feature-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.feature-title-card {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  font-size: 0.9375rem;
+  color: #525252;
+  line-height: 1.7;
+}
+
+/* ===== GALLERY SECTION ===== */
+.gallery-section {
+  background-color: #faf9f6;
+  padding: 120px 2rem;
+}
+
+.gallery-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.gallery-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.gallery-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.gallery-description {
+  font-size: 1rem;
+  color: #525252;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.gallery-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  border-bottom: 1px solid #1a1a1a;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.gallery-cta:hover {
+  gap: 1rem;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.gallery-image-item {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gallery-image-item.large {
+  grid-row: span 2;
+}
+
+.gallery-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-image-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+  background-color: #1a1a1a;
+  padding: 100px 2rem;
+}
+
+.cta-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 400;
+  color: #faf9f6;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.cta-description {
+  font-size: 1rem;
+  color: rgba(250, 249, 246, 0.7);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cta-btn-primary {
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  background-color: #faf9f6;
+  color: #1a1a1a;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.cta-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cta-btn-secondary {
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  background-color: transparent;
+  color: #faf9f6;
+  border: 1px solid rgba(250, 249, 246, 0.3);
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.cta-btn-secondary:hover {
+  border-color: #faf9f6;
+}
+
+
+.cta-btn-primary,
+.cta-btn-secondary {
+  text-decoration: none; /* يشيل الخط تحت النص */
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero-stats {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+  }
+  
+  .stat-divider {
+    display: none;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .features {
+    padding: 80px 2rem;
+  }
+
+  .gallery-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .gallery-section {
+    padding: 80px 2rem;
+  }
+
+  .gallery-text {
+    text-align: center;
+  }
+
+  .gallery-cta {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .hero-inner {
+    padding: 0 1.5rem;
+  }
+
+  .hero-stats {
+    width: 100%;
+  }
+
+  .stat-item {
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .floating-card {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: -50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  .gallery-images {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-image-item.large {
+    grid-row: auto;
+  }
+
+  .gallery-image-item img {
+    height: 250px;
+  }
+
+  .cta-section {
+    padding: 80px 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-btn-primary,
+  .cta-btn-secondary {
+    width: 100%;
+  }
+}
+
+/* ===== CONSIGNMENT AUCTION SECTION ===== */
+.consignment-section {
+  background-color: #fff;
+  padding: 100px 2rem;
+}
+
+.consignment-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.consignment-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.consignment-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.consignment-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.consignment-subtitle {
+  font-size: 1.0625rem;
+  color: #525252;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.consignment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.consignment-card {
+  padding: 2rem;
+  background: linear-gradient(135deg, #faf9f6 0%, #fff 100%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.consignment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.consignment-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  margin: 0 auto 1.25rem;
+  color: #faf9f6;
+}
+
+.consignment-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+/* ===== CALL NOW SECTION ===== */
+.call-now-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 60px 2rem;
+}
+
+.call-now-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.call-now-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.call-now-icon {
+  color: #FFC700;
+  flex-shrink: 0;
+}
+
+.call-now-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.call-now-label {
+  font-size: 1.125rem;
+  color: rgba(250, 249, 246, 0.8);
+  letter-spacing: 0.02em;
+}
+
+.call-now-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 500;
+  color: #FFC700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.call-now-number:hover {
+  color: #fff;
+  text-shadow: 0 0 20px rgba(255, 199, 0, 0.5);
+}
+
+/* ===== AUCTION INFO SECTION ===== */
+.auction-info-section {
+  background-color: #faf9f6;
+  padding: 100px 2rem;
+}
+
+.auction-info-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.auction-info-card {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.auction-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.auction-info-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  color: #faf9f6;
+}
+
+.auction-info-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.auction-info-text {
+  font-size: 1rem;
+  color: #525252;
+  line-height: 1.7;
+}
+
+.location-highlight {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.auction-info-subtext {
+  font-size: 0.9375rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ===== BIDDING LINKS SECTION ===== */
+.bidding-links-section {
+  background-color: #fff;
+  padding: 100px 2rem;
+}
+
+.bidding-links-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.bidding-links-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.bidding-links-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.bidding-links-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.bidding-links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.bidding-link-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(135deg, #faf9f6 0%, #fff 100%);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.bidding-link-card:hover {
+  border-color: #1a1a1a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.bidding-link-content {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.bidding-link-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  color: #faf9f6;
+}
+
+.bidding-link-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bidding-link-label {
+  font-size: 0.8125rem;
+  color: #666;
+  letter-spacing: 0.02em;
+}
+
+.bidding-link-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.bidding-link-arrow {
+  color: #1a1a1a;
+  transition: transform 0.3s ease;
+}
+
+.bidding-link-card:hover .bidding-link-arrow {
+  transform: translateX(5px);
+}
+
+/* ===== RESPONSIVE FOR NEW SECTIONS ===== */
+@media (max-width: 1024px) {
+  .consignment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .consignment-section {
+    padding: 80px 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .consignment-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .consignment-card {
+    padding: 1.5rem;
+  }
+
+  .call-now-section {
+    padding: 50px 1.5rem;
+  }
+
+  .call-now-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .auction-info-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .auction-info-section {
+    padding: 80px 1.5rem;
+  }
+
+  .auction-info-card {
+    padding: 2rem;
+  }
+
+  .bidding-links-section {
+    padding: 80px 1.5rem;
+  }
+
+  .bidding-link-card {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .bidding-link-content {
+    gap: 1rem;
+  }
+
+  .bidding-link-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .bidding-link-name {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .consignment-section,
+  .auction-info-section,
+  .bidding-links-section {
+    padding: 60px 1rem;
+  }
+
+  .call-now-section {
+    padding: 40px 1rem;
+  }
+
+  .bidding-link-card {
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* ===== SELL & BUY WITH US SECTION ===== */
+.sell-buy-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+  padding: 100px 2rem;
+}
+
+.sell-buy-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sell-buy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.sell-buy-card {
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sell-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #faf9f6;
+}
+
+.sell-card .sell-buy-icon {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFC700;
+}
+
+.sell-card .sell-buy-btn {
+  background-color: #faf9f6;
+  color: #1a1a1a;
+}
+
+.sell-card .sell-buy-btn:hover {
+  background-color: #FFC700;
+}
+
+.buy-card {
+  background-color: #fff;
+  color: #1a1a1a;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.buy-card .sell-buy-icon {
+  background-color: #1a1a1a;
+  color: #faf9f6;
+}
+
+.buy-card .sell-buy-btn {
+  background-color: #1a1a1a;
+  color: #faf9f6;
+}
+
+.buy-card .sell-buy-btn:hover {
+  background-color: #333;
+}
+
+.sell-buy-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.sell-buy-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+}
+
+.sell-buy-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.sell-buy-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.85;
+  margin-bottom: 2rem;
+}
+
+.sell-buy-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 100px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Condition Box */
+.condition-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 3rem;
+  background: linear-gradient(135deg, #FFC700 0%, #FFD700 100%);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(255, 199, 0, 0.3);
+}
+
+.condition-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  color: #FFC700;
+  flex-shrink: 0;
+}
+
+.condition-content {
+  text-align: left;
+}
+
+.condition-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.condition-text {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ===== PAYMENT SECTION ===== */
+.payment-section {
+  background-color: #fff;
+  padding: 100px 2rem;
+}
+
+.payment-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.payment-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.payment-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.payment-card {
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.payment-card.accepted {
+  background: linear-gradient(135deg, #f0fdf4 0%, #fff 100%);
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.payment-card.not-accepted {
+  background: linear-gradient(135deg, #fef2f2 0%, #fff 100%);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.payment-card.tax-info {
+  background: linear-gradient(135deg, #faf9f6 0%, #fff 100%);
+}
+
+.payment-card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.payment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.payment-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.payment-item svg {
+  flex-shrink: 0;
+}
+
+.payment-card.accepted .payment-item svg {
+  color: #22c55e;
+}
+
+.payment-item.declined svg {
+  color: #ef4444;
+}
+
+.payment-item.credit-card-item {
+  flex-wrap: wrap;
+}
+
+.payment-fee {
+  display: block;
+  width: 100%;
+  margin-left: 2rem;
+  font-size: 0.875rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+.tax-content {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.tax-rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.tax-percentage {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.tax-label {
+  font-size: 1rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.tax-note {
+  font-size: 0.9375rem;
+  color: #525252;
+  line-height: 1.6;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+}
+
+/* ===== RESPONSIVE FOR NEW SECTIONS ===== */
+@media (max-width: 1024px) {
+  .sell-buy-section {
+    padding: 80px 2rem;
+  }
+  
+  .payment-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .payment-section {
+    padding: 80px 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sell-buy-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sell-buy-card {
+    padding: 2.5rem;
+  }
+  
+  .condition-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .condition-content {
+    text-align: center;
+  }
+  
+  .sell-buy-section {
+    padding: 60px 1.5rem;
+  }
+  
+  .payment-section {
+    padding: 60px 1.5rem;
+  }
+  
+  .payment-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sell-buy-section,
+  .payment-section {
+    padding: 50px 1rem;
+  }
+  
+  .sell-buy-card {
+    padding: 2rem;
+  }
+  
+  .sell-buy-title {
+    font-size: 1.5rem;
+  }
+  
+  .condition-box {
+    padding: 1.5rem;
+  }
+  
+  .condition-icon {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .tax-percentage {
+    font-size: 2.5rem;
+  }
+}
